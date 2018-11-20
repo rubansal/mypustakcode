@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.productfullview">
+
+
+    <RelativeLayout
+        android:id="@+id/maintop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:minHeight="?android:attr/actionBarSize"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/navigationnn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/back_icon"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" >
+
+            <ImageView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxEms="6"
+
+                android:maxLines="1"
+                android:src="@drawable/share_icon"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/cart_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/tv_title"
+                android:src="@drawable/cart_add_icon" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/maintop"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardElevation="4dp"
+                android:id="@+id/cardview"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="0dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/restaurant_image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splashscreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/restaurant_name"
+                        android:text="Name of book"
+                        android:textColor="@android:color/white"
+                        android:background="#4f0e0d0e"
+                        android:textSize="14.5sp"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:text="Name of book"
+                android:textColor="@android:color/black"
+                android:textSize="14.5sp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/cardview"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/author"
+                android:text="Author:"
+                android:textColor="@android:color/black"
+                android:textSize="14.5sp"
+                android:layout_marginTop="-10dp"
+                android:layout_below="@+id/title"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/l1"
+                android:orientation="horizontal"
+                android:layout_below="@+id/author"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/mrp"
+                    android:text="MRP: 200 Free"
+                    android:textColor="@android:color/black"
+                    android:textSize="14.5sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="90sp"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/shippinghandling"
+                    android:text="Shipping/Handeling"
+                    android:layout_gravity="center_vertical|end|right"
+                    android:textColor="@android:color/black"
+                    android:textSize="14.5sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="10sp"
+                android:id="@+id/s1"
+                android:layout_below="@+id/l1"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/s1"
+                android:id="@+id/l2"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/donatorimage"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/splashscreen" />
+
+
+
+                    <TextView
+                        android:id="@+id/donate"
+                        android:text="Donated by"
+                        android:layout_gravity="end"
+                        android:textColor="@android:color/black"
+                        android:textSize="14.5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <android.support.v4.widget.Space
+                    android:layout_width="110sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/shipingdetails"
+                    android:text=""
+                    android:layout_gravity="center_vertical|end|right"
+                    android:gravity="end|right|center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textSize="14.5sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/l3"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/l2"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14.5sp"
+                    android:textColor="#000000"
+                    android:lineSpacingExtra="6.5sp"
+                    tools:text="Delivery by"
+                    />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="110sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14.5sp"
+                    android:textColor="#000000"
+                    android:lineSpacingExtra="6.5sp"
+                    tools:text="Cash On Delivery
+		Available " />
+            </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:id="@+id/l4"
+    android:orientation="horizontal"
+    android:layout_below="@+id/l3"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:id="@+id/rl_edit"
+        android:background="@drawable/bg_border1">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:layout_marginRight="10dp"
+            android:hint="Pincode"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:id="@+id/apply_coupon_edit"
+            android:layout_toLeftOf="@+id/tv_apply_coupon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHANGE"
+            android:id="@+id/tv_apply_coupon"
+            android:textStyle="bold"
+            android:textColor="#d99240"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/l5"
+                android:layout_below="@+id/l4"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/specialoffer"
+                    android:text="Special offer"
+                    android:layout_gravity="end"
+                    android:textColor="@android:color/black"
+                    android:textSize="14.5sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/sploff"
+                    android:layout_width="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="15dp"
+                    android:src="@drawable/default_dot"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
